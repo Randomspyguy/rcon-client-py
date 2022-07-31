@@ -87,7 +87,7 @@ while True: #Main Loop
             
             response = rcon.command(command)                                                                                    # Send Command
             
-            clean_res = format.clean(response)                                                                                     # Recieve and clean response using McTools/FormatterTools
+            clean_res = format.clean(response)                                                                                  # Recieve and clean response using McTools/FormatterTools
             
             print(clean_res)                                                                                                    # Return response
         
@@ -95,19 +95,12 @@ while True: #Main Loop
             
             print(colored('ERROR: COULD NOT CONNECT TO:    ' + HOST, 'red', attrs=['bold']))                                    # Error bad host/port
             
-            print(colored('Check your password, it may be incorrect.',
-                        '\nMake sure RCON is speaking to the PORT.',\
-                        '\nWithout an RCON client speaking to an the PORT the session will break.',
-                        '\nEx: 25565 is default Minecraft Port, it will break the code.', 'magenta'))
+            error = 'Check your password, it may be incorrect\nMake sure RCON is speaking to the PORT.\nWithout an RCON client speaking to an the PORT the session will break.\nEx: 25565 is default Minecraft Port, it will break the code.'
+            
+            print(colored(error, 'magenta'))
             
     else:
         
-        print(colored(yellow_arrow) + colored(' PORT IS NOT OPEN', 'red', attrs=['bold']))                                      # Port not open.
+        print(yellow_arrow + colored(' PORT IS NOT OPEN', 'red', attrs=['bold']))                                               # Port not open.
         
         done = True
-    
-    
-        
-    
-
-
