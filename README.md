@@ -30,7 +30,7 @@ The program will check to see if the port is open.
 - Does not work locally. Searches for a port via INET therefore your server does need to be port-forwarded and HOST ip needs to be public IP address.
 - GUI?? For funsies.
 - Currently animate() is defined but can only be used for the PORT search. I want to automate this and make it global. Plans include turing this from:
-'''python
+```python
 def animate():
         for c in itertools.cycle(loading):
             if done:
@@ -39,9 +39,9 @@ def animate():
             sys.stdout.write(colored('\rChecking if port is open... ', 'green') + c)
             sys.stdout.flush()
             time.sleep(0.5)
-'''
+```
 to:
-'''python
+```python
 def animate(load, load_color, str, str_color, sleep: int):
         for c in itertools.cycle(load):
             if done:
@@ -50,7 +50,7 @@ def animate(load, load_color, str, str_color, sleep: int):
             sys.stdout.write(colored('\r' + str, str_color) + c)
             sys.stdout.flush()
             time.sleep(sleep)
-'''
+```
 This allows for almost full customizability with the colors of what is being animated.
 
 - Seems that the termcolor 'bold' character attributes break within CMD. For best results use VSCode. Loading animation, errors, and other colors should work as expected.
