@@ -17,6 +17,20 @@ import socket, itertools, threading, sys, colorama, time
 - mctools does most of the work here, handling the RCON client end.
 - mctools/formattertools is a fantastic toolset to modify the response from the command line. Generally the output of an RCON response will be the raw string data for what is presented. Colored text in minecraft requires prefixes to add those colors. This tool translates those prefixes into command line color and beuifies it (using termcolor).
 
+# Usage:
+Run The Following:
+```bash
+    pip install mctools
+    pip install termcolor
+```
+The run rcon.py within the interpreter and enjoy!
+```bash
+python rcon.py
+```
+
+
+
+
 # Features:
 - I am a stickler for beauty and usability. I need pretty colors and animation.
 - Keeps constant connection without bombarding the server with requests per command.
