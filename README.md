@@ -53,3 +53,5 @@ def animate(load, load_color, str, str_color, sleep: int):
 '''
 This allows for almost full customizability with the colors of what is being animated.
 
+- Seems that the termcolor 'bold' character attributes break within CMD. For best results use VSCode. Loading animation, errors, and other colors should work as expected.
+
