@@ -87,7 +87,7 @@ while True: #Main Loop
             
             response = rcon.command(command)                                                                                    # Send Command
             
-            clean_res = (response).clean()                                                                                      # Recieve and clean response using McTools/FormatterTools
+            clean_res = format.clean(response)                                                                                     # Recieve and clean response using McTools/FormatterTools
             
             print(clean_res)                                                                                                    # Return response
         
